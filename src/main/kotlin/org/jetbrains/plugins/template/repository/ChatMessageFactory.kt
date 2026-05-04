@@ -1,8 +1,7 @@
-package org.jetbrains.plugins.template.chatApp.repository
+package org.jetbrains.plugins.template.repository
 
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage
 import java.time.LocalDateTime
-
 
 /**
  * Factory class responsible for creating instances of `ChatMessage`.

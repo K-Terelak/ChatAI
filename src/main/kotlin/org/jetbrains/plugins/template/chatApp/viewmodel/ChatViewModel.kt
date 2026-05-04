@@ -7,8 +7,8 @@ import com.intellij.openapi.project.Project
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage
-import org.jetbrains.plugins.template.chatApp.repository.ChatRepository
-import org.jetbrains.plugins.template.chatApp.repository.ChatRepositoryApi
+import org.jetbrains.plugins.template.repository.ChatRepository
+import org.jetbrains.plugins.template.repository.ChatRepositoryApi
 
 interface ChatViewModelApi : Disposable {
     val chatMessagesFlow: StateFlow<List<ChatMessage>>
