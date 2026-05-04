@@ -2,7 +2,7 @@ package org.jetbrains.plugins.template.chatApp.model
 
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage.ChatMessageType.AI_THINKING
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage.ChatMessageType.TEXT
-import org.jetbrains.plugins.template.weatherApp.model.Searchable
+import org.jetbrains.plugins.template.model.Searchable
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*

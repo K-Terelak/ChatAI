@@ -8,8 +8,18 @@
     <resource-bundle>messages.ComposeTemplateBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="org.jetbrains.plugins.template.toolWindow.ComposeSamplesToolWindowFactory"
-                    icon="org.jetbrains.plugins.template.ComposeIcons.ComposeToolWindow"
-                    id="ComposeSamples"/>
+        <toolWindow
+                factoryClass="org.jetbrains.plugins.template.toolWindow.ComposeSamplesToolWindowFactory"
+                icon="org.jetbrains.plugins.template.ComposeIcons.ComposeToolWindow"
+                id="ComposeSamples"/>
+
+        <applicationService
+                serviceInterface="org.jetbrains.plugins.template.repository.settings.SettingsService"
+                serviceImplementation="org.jetbrains.plugins.template.repository.settings.SettingsServiceImpl"/>
+
+        <applicationConfigurable
+                id="com.example.chatai.settings"
+                key="settings.display.name"
+                instance="org.jetbrains.plugins.template.settings.SettingsConfigurable"/>
     </extensions>
 </idea-plugin>

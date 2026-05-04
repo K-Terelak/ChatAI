@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.weatherApp.model
+package org.jetbrains.plugins.template.model
 
 /**
  * Represents an entity that can be filtered by a search query.
