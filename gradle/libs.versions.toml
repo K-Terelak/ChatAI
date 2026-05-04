@@ -7,6 +7,8 @@ hamcrest = "2.2"
 composeuitest = "1.10.0"
 jewelstandalone = "0.34.0-253.31033.149"
 skikoAwtRuntimeAll = "0.9.37.3"
+langchain4j = "1.13.1"
+langchain4j-github-models = "1.9.1-beta17" # Deprecated from 1.10.0
 
 # plugins
 changelog = "2.2.1"
@@ -20,6 +22,9 @@ hamcrest = { group = "org.hamcrest", name = "hamcrest", version.ref = "hamcrest"
 composeuitest = { group = "org.jetbrains.compose.ui", name = "ui-test-junit4-desktop", version.ref = "composeuitest" }
 jewelstandalone = { group = "org.jetbrains.jewel", name = "jewel-int-ui-standalone", version.ref = "jewelstandalone" }
 skikoAwtRuntimeAll = { group = "org.jetbrains.skiko", name = "skiko-awt-runtime-all", version.ref = "skikoAwtRuntimeAll" }
+langchain4j = { module = "dev.langchain4j:langchain4j", version.ref = "langchain4j" }
+langchain4j-github-models = { module = "dev.langchain4j:langchain4j-github-models", version.ref = "langchain4j-github-models" }
+
 
 
 [plugins]

@@ -38,6 +38,9 @@ repositories {
 }
 
 dependencies {
+    implementation(libs.langchain4j)
+    implementation(libs.langchain4j.github.models)
+
     testImplementation(libs.junit)
     testImplementation(libs.opentest4j)
     testImplementation(libs.hamcrest)

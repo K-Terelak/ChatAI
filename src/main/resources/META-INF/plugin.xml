@@ -17,6 +17,10 @@
                 serviceInterface="org.jetbrains.plugins.template.repository.settings.SettingsService"
                 serviceImplementation="org.jetbrains.plugins.template.repository.settings.SettingsServiceImpl"/>
 
+        <applicationService
+                serviceInterface="org.jetbrains.plugins.template.repository.github_models.GithubModelsService"
+                serviceImplementation="org.jetbrains.plugins.template.repository.github_models.GithubModelsServiceImpl"/>
+
         <applicationConfigurable
                 id="com.example.chatai.settings"
                 key="settings.display.name"
