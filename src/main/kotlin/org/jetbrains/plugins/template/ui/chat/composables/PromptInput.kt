@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.chatApp.ui
+package org.jetbrains.plugins.template.ui.chat.composables
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.input.TextFieldState
@@ -14,32 +14,8 @@ import org.jetbrains.jewel.ui.component.DefaultButton
 import org.jetbrains.jewel.ui.component.OutlinedButton
 import org.jetbrains.jewel.ui.component.Text
 import org.jetbrains.jewel.ui.component.TextArea
-import org.jetbrains.plugins.template.chatApp.viewmodel.MessageInputState
-import org.jetbrains.plugins.template.chatApp.viewmodel.isSending
-
-@Composable
-fun ChatSearchBarPreview() {
-    val state = remember { mutableStateOf<MessageInputState>(MessageInputState.Enabled("")) }
-    val textFieldState = rememberTextFieldState()
-
-    PromptInput(
-        Modifier
-            .fillMaxWidth()
-            .heightIn(max = 120.dp),
-        promptInputState = state.value,
-        textFieldState = textFieldState,
-        onInputChanged = {
-            state.value = if (it.isNotBlank()) MessageInputState.Enabled(it) else MessageInputState.Disabled
-        },
-        onSend = { text ->
-            if (state.value is MessageInputState.Sending) {
-                state.value = MessageInputState.Disabled
-            } else {
-                state.value = MessageInputState.Sending(text)
-            }
-        },
-    )
-}
+import org.jetbrains.plugins.template.ui.chat.search.MessageInputState
+import org.jetbrains.plugins.template.ui.chat.search.isSending
 
 @Composable
 fun PromptInput(

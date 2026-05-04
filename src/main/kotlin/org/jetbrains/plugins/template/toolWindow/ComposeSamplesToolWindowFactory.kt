@@ -7,8 +7,8 @@ import com.intellij.openapi.util.Disposer
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
 import org.jetbrains.jewel.bridge.addComposeTab
-import org.jetbrains.plugins.template.chatApp.ChatAppSample
-import org.jetbrains.plugins.template.chatApp.viewmodel.ChatViewModelFactory
+import org.jetbrains.plugins.template.ui.chat.ChatAppSample
+import org.jetbrains.plugins.template.ui.chat.ChatViewModelFactory
 
 class ComposeSamplesToolWindowFactory : ToolWindowFactory, DumbAware {
     override fun shouldBeAvailable(project: Project) = true

@@ -5,7 +5,7 @@ import com.intellij.openapi.ui.ComboBox
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPasswordField
 import com.intellij.util.ui.FormBuilder
-import org.jetbrains.plugins.template.ComposeTemplateBundle
+import org.jetbrains.plugins.template.ui.theme.ComposeTemplateBundle
 import org.jetbrains.plugins.template.model.LLMModel
 import org.jetbrains.plugins.template.repository.settings.SettingsService
 import org.jetbrains.plugins.template.repository.settings.SettingsServiceImpl

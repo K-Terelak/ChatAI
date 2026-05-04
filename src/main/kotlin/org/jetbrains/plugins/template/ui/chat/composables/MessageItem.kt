@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.chatApp.ui
+package org.jetbrains.plugins.template.ui.chat.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -23,8 +23,14 @@ import org.jetbrains.jewel.foundation.theme.JewelTheme
 import org.jetbrains.jewel.ui.component.CircularProgressIndicator
 import org.jetbrains.jewel.ui.component.Text
 import org.jetbrains.jewel.ui.typography
-import org.jetbrains.plugins.template.chatApp.ChatAppColors
+import org.jetbrains.plugins.template.ui.theme.ChatAppColors
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage
+import org.jetbrains.plugins.template.ui.chat.search.SearchMatches
+import org.jetbrains.plugins.template.ui.chat.search.SearchState
+import org.jetbrains.plugins.template.ui.chat.search.TextSegment
+import org.jetbrains.plugins.template.ui.chat.search.searchMatchesIn
+import org.jetbrains.plugins.template.ui.chat.search.selectedSearchMatchId
+import kotlin.collections.plusAssign
 
 @Composable
 fun SentMessageBubble(

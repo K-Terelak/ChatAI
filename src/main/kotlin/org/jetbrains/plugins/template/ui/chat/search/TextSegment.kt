@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.chatApp.ui
+package org.jetbrains.plugins.template.ui.chat.search
 
 import androidx.compose.runtime.Immutable
 

@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.chatApp.viewmodel
+package org.jetbrains.plugins.template.ui.chat
 
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.components.Service
@@ -7,8 +7,11 @@ import com.intellij.openapi.project.Project
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage
+import org.jetbrains.plugins.template.ui.chat.search.SearchChatMessagesHandler
+import org.jetbrains.plugins.template.ui.chat.search.SearchChatMessagesHandlerImpl
 import org.jetbrains.plugins.template.repository.ChatRepository
 import org.jetbrains.plugins.template.repository.ChatRepositoryApi
+import org.jetbrains.plugins.template.ui.chat.search.MessageInputState
 
 interface ChatViewModelApi : Disposable {
     val chatMessagesFlow: StateFlow<List<ChatMessage>>

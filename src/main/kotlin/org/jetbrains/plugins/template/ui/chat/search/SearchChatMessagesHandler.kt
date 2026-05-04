@@ -1,7 +1,6 @@
-package org.jetbrains.plugins.template.chatApp.viewmodel
+package org.jetbrains.plugins.template.ui.chat.search
 
 import kotlinx.coroutines.flow.StateFlow
-import org.jetbrains.plugins.template.chatApp.ui.SearchState
 
 /**
  * Interface that handles the process of searching for chat messages.

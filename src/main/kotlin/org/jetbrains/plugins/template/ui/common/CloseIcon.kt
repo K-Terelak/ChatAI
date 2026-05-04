@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.components
+package org.jetbrains.plugins.template.ui.common
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.HoverInteraction
@@ -9,8 +9,8 @@ import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.semantics.Role
 import org.jetbrains.jewel.ui.component.Icon
-import org.jetbrains.plugins.template.ComposeTemplateBundle
-import org.jetbrains.plugins.template.chatApp.ChatAppIcons
+import org.jetbrains.plugins.template.ui.theme.ComposeTemplateBundle
+import org.jetbrains.plugins.template.ui.theme.ChatAppIcons
 
 @Composable
 fun CloseIcon(onClick: () -> Unit) {

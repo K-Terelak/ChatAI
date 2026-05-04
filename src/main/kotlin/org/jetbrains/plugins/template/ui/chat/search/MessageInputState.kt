@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.chatApp.viewmodel
+package org.jetbrains.plugins.template.ui.chat.search
 
 sealed class MessageInputState(val inputText: String) {
     object Disabled : MessageInputState("")

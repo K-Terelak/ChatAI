@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.chatApp
+package org.jetbrains.plugins.template.ui.theme
 
 import org.jetbrains.jewel.ui.icons.AllIconsKeys
 

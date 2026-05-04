@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.chatApp.ui
+package org.jetbrains.plugins.template.ui.chat.search
 
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage
-import org.jetbrains.plugins.template.chatApp.ui.SearchState.*
+import org.jetbrains.plugins.template.ui.chat.search.SearchState.*
 
 
 /**

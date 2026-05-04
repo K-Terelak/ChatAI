@@ -1,9 +1,8 @@
-package org.jetbrains.plugins.template.chatApp.viewmodel
+package org.jetbrains.plugins.template.ui.chat.search
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.*
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage
-import org.jetbrains.plugins.template.chatApp.ui.*
 
 /**
  * Implementation of the SearchChatMessagesHandler interface for handling

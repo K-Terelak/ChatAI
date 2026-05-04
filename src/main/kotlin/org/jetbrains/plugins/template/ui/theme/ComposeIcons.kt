@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package org.jetbrains.plugins.template.ui.theme
 
 import com.intellij.ui.IconManager
 

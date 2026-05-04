@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template.chatApp
+package org.jetbrains.plugins.template.ui.chat
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -20,13 +20,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.flow.distinctUntilChanged
 import org.jetbrains.jewel.foundation.theme.JewelTheme
-import org.jetbrains.jewel.ui.Orientation
 import org.jetbrains.jewel.ui.component.*
 import org.jetbrains.plugins.template.chatApp.model.ChatMessage
-import org.jetbrains.plugins.template.chatApp.ui.*
-import org.jetbrains.plugins.template.chatApp.viewmodel.ChatViewModel
-import org.jetbrains.plugins.template.chatApp.viewmodel.MessageInputState
-import org.jetbrains.plugins.template.components.CloseIcon
+import org.jetbrains.plugins.template.ui.common.CloseIcon
+import org.jetbrains.plugins.template.ui.chat.composables.ChatHeaderTitle
+import org.jetbrains.plugins.template.ui.chat.composables.PromptInput
+import org.jetbrains.plugins.template.ui.chat.composables.ReceivedMessageBubble
+import org.jetbrains.plugins.template.ui.chat.composables.SentMessageBubble
+import org.jetbrains.plugins.template.ui.chat.search.MessageInputState
+import org.jetbrains.plugins.template.ui.chat.search.SearchState
+import org.jetbrains.plugins.template.ui.chat.search.currentSelectedSearchMatch
+import org.jetbrains.plugins.template.ui.chat.search.hasResults
+import org.jetbrains.plugins.template.ui.chat.search.isSearching
+import org.jetbrains.plugins.template.ui.chat.search.searchMatchesCount
+import org.jetbrains.plugins.template.ui.chat.search.searchQuery
+import org.jetbrains.plugins.template.ui.chat.search.selectedSearchMatchId
+import org.jetbrains.plugins.template.ui.common.HorizontalDivider
+import org.jetbrains.plugins.template.ui.theme.ChatAppColors
+import org.jetbrains.plugins.template.ui.theme.ChatAppIcons
 
 @Composable
 fun ChatAppSample(viewModel: ChatViewModel) {
@@ -92,14 +103,6 @@ fun ChatAppSample(viewModel: ChatViewModel) {
             onStop = { viewModel.onAbortSendingMessage() }
         )
     }
-}
-
-@Composable
-private fun HorizontalDivider() {
-    Divider(
-        modifier = Modifier.fillMaxWidth(),
-        orientation = Orientation.Horizontal
-    )
 }
 
 @Composable
