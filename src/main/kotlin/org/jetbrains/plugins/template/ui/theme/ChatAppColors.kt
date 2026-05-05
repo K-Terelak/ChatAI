@@ -55,4 +55,14 @@ object ChatAppColors {
 
         val selectedHighlightedWordText: Color = Color.Black
     }
+
+    object Error {
+        val background: Color
+            @Composable get() = JBColor.namedColor("Notification.Error.background", 0xF8D7DA)
+                .toComposeColor()
+
+        val foreground: Color
+            @Composable get() = JBColor.namedColor("Notification.Error.foreground", 0x842029)
+                .toComposeColor()
+    }
 }

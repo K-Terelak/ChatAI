@@ -9,19 +9,32 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import org.jetbrains.jewel.bridge.addComposeTab
 import org.jetbrains.plugins.template.ui.chat.ChatAppSample
 import org.jetbrains.plugins.template.ui.chat.ChatViewModelFactory
+import org.jetbrains.plugins.template.ui.review.CodeReviewAppSample
+import org.jetbrains.plugins.template.ui.review.CodeReviewViewModelFactory
 
 class ComposeSamplesToolWindowFactory : ToolWindowFactory, DumbAware {
     override fun shouldBeAvailable(project: Project) = true
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
         chatApp(project, toolWindow)
+        codeReview(project, toolWindow)
     }
+
     private fun chatApp(project: Project, toolWindow: ToolWindow) {
         val viewModel = project.service<ChatViewModelFactory>().create()
         Disposer.register(toolWindow.disposable, viewModel)
 
         toolWindow.addComposeTab("Chat App", focusOnClickInside = true) {
             ChatAppSample(viewModel)
+        }
+    }
+
+    private fun codeReview(project: Project, toolWindow: ToolWindow) {
+        val viewModel = project.service<CodeReviewViewModelFactory>().create()
+        Disposer.register(toolWindow.disposable, viewModel)
+
+        toolWindow.addComposeTab("Code Review", focusOnClickInside = true) {
+            CodeReviewAppSample(viewModel)
         }
     }
 }

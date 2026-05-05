@@ -9,6 +9,7 @@ jewelstandalone = "0.34.0-253.31033.149"
 skikoAwtRuntimeAll = "0.9.37.3"
 langchain4j = "1.13.1"
 langchain4j-github-models = "1.9.1-beta17" # Deprecated from 1.10.0
+kotlinx-serialization-json = "1.7.3"
 
 # plugins
 changelog = "2.2.1"
@@ -24,11 +25,11 @@ jewelstandalone = { group = "org.jetbrains.jewel", name = "jewel-int-ui-standalo
 skikoAwtRuntimeAll = { group = "org.jetbrains.skiko", name = "skiko-awt-runtime-all", version.ref = "skikoAwtRuntimeAll" }
 langchain4j = { module = "dev.langchain4j:langchain4j", version.ref = "langchain4j" }
 langchain4j-github-models = { module = "dev.langchain4j:langchain4j-github-models", version.ref = "langchain4j-github-models" }
-
-
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 
 [plugins]
 changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
 intelliJPlatform = { id = "org.jetbrains.intellij.platform", version.ref = "intelliJPlatform" }
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

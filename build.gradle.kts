@@ -5,6 +5,7 @@ import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 plugins {
     id("java") // Java support
     alias(libs.plugins.kotlin) // Kotlin support
+    alias(libs.plugins.kotlinSerialization) // Kotlinx serialization
     alias(libs.plugins.intelliJPlatform) // IntelliJ Platform Gradle Plugin
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.composeCompiler) // Gradle Compose Compiler Plugin
@@ -40,6 +41,7 @@ repositories {
 dependencies {
     implementation(libs.langchain4j)
     implementation(libs.langchain4j.github.models)
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
     testImplementation(libs.opentest4j)
