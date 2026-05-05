@@ -1,6 +1,8 @@
 package org.jetbrains.plugins.template.repository.git
 
+import com.intellij.openapi.application.edtWriteAction
 import com.intellij.openapi.components.Service
+import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.project.Project
 import java.io.File
 
@@ -21,7 +23,14 @@ interface GitDiffService {
 class GitDiffServiceImpl(private val project: Project) : GitDiffService {
 
     override suspend fun getCurrentDiff(): String {
+        saveFiles()
         return executeGitCommand("git diff --no-color")
+    }
+
+    private suspend fun saveFiles() {
+        edtWriteAction {
+            FileDocumentManager.getInstance().saveAllDocuments()
+        }
     }
 
     private fun executeGitCommand(command: String): String {
